@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminho para o Hexa - Imersão IA Alura</title>
+    <title>Caminho para o tetra - Imersão IA Alura</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(#006400, #000080);
+            background: linear-gradient(#d2e904, #298000);
             color: #fff;
             margin: 0;
             padding: 20px;
@@ -63,8 +63,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>🏆 CAMINHO PARA O HEXA</h1>
-        <p><strong>Uma aventura interativa da Copa do Mundo 2026 • Imersão IA Alura</strong></p>
+        <h1>🏆 CAMINHO PARA O TETRA</h1>
+        <p><strong>Uma aventura interativa da Copa do Mundo 2002 • Imersão IA Alura</strong></p>
 
         <div id="content">
             <!-- História inicial será inserida via JS -->
@@ -77,18 +77,18 @@
         const story = {
             start: {
                 text: `
-                    <p class="story">Era 2026. A Copa do Mundo estava acontecendo e o Brasil sonhava com o hexa. Você é Alex, analista da Seleção Brasileira. O time contava com Neymar, Vinícius Júnior e o jovem Endrick.</p>
+                    <p class="story">Era 2026. A Copa do Mundo estava acontecendo e o Brasil sonhava com o tetra. Você é Fuzzinatto, analista da Seleção Brasileira. O time contava com Ronaldo, Ronaldinho e o jovem Kaká.</p>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/NY_NJ_Stadium_Brazil_V_Morocco_13_June_2026-59.jpg" alt="Estádio lotado na Copa 2026">
-                    <p class="story">Primeira fase: vitórias convincentes contra Inglaterra, Senegal e Irã. O time chega às oitavas com moral.</p>
+                    <p class="story">Primeira fase: vitórias convincentes contra Inglaterra, Senegal e Irã. O time chega às oitavas com aura.</p>
                 `,
                 choices: [
                     { text: "Reforçar a marcação com rodízio", next: "quartas" },
-                    { text: "Apostar no ataque total", next: "quartas" }
+                    { text: "Apostar no ataque e farmar aura", next: "quartas" }
                 ]
             },
             quartas: {
                 text: `
-                    <p class="story">Nas quartas, contra a França, foi um jogo épico. Neymar deu um passe de calcanhar genial para Vinícius Júnior abrir o placar. Endrick virou o jogo. Brasil classificado!</p>
+                    <p class="story">Nas quartas, contra a França, foi um jogo épico. Ronaldo deu um passe de calcanhar genial para Ronaldiho abrir o placar. Ronaldinho virou o jogo. Brasil classificado!</p>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Confed.Cup2013Champions.jpg" alt="Seleção celebrando">
                     <p class="story">Você percebeu que o meio-campo cansava. A semi-final contra a Alemanha seria decisiva.</p>
                 `,
@@ -98,22 +98,22 @@
             },
             semifinal: {
                 text: `
-                    <p class="story">Na semifinal, o Brasil enfrentou a Alemanha. Após um primeiro tempo tenso, Neymar fez um gol de falta incrível e Endrick selou a vitória por 2x0. O Brasil estava na FINAL contra a Argentina!</p>
+                    <p class="story">Na semifinal, o Brasil enfrentou a Alemanha. Após um primeiro tempo tenso, Kaká fez um gol de falta incrível e Ronaldinho selou a vitória por 2x0. O Brasil estava na FINAL contra a Argentina!</p>
                     <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80" alt="Estádio lotado na semifinal">
                 `,
                 choices: [
-                    { text: "Ir para a Final - Buscar o Hexa", next: "final_hexa" },
+                    { text: "Ir para a Final - Buscar o tetra", next: "final_tetra" },
                     { text: "Ir para a Final - Rivalidade máxima", next: "final_derrota" }
                 ]
             },
             final_hexa: {
                 text: `
                     <div class="ending">
-                        <h2>🏆 O HEXA CHEGOU!</h2>
-                        <p class="story">Na grande final, a Argentina abriu o placar, mas o Brasil reagiu. Neymar empatou, Vinícius Júnior virou de pênalti e Endrick fechou o placar em 3x1. O Brasil é hexacampeão do mundo!</p>
+                        <h2>🏆 O TETRA CHEGOU!</h2>
+                        <p class="story">Na grande final, a Argentina abriu o placar, mas o Brasil reagiu. Ronaldo empatou, Ronaldinho virou de pênalti e Kaká fechou o placar em 3x1. O Brasil é tetracampeão do mundo!</p>
                         <img src="<img src="https://images.futebolinterior.com.br/2022/07/selecao-brasileira-1-1280x720-1.jpg" alt="Seleção Brasileira comemorando o Hexa">
-                        <p class="story">Neymar chorando, Vini Jr dançando, Endrick sendo carregado. O país inteiro celebra nas ruas com verde, amarelo e azul.</p>
-                        <p><strong>Final Feliz - Hexa conquistado!</strong></p>
+                        <p class="story">Ronaldo chorando, Ronaldinho dançando, Kaká sendo carregado. O país inteiro celebra nas ruas com verde, amarelo e azul.</p>
+                        <p><strong>Final Feliz - Tetra conquistado!</strong></p>
                     </div>
                 `,
                 choices: []
@@ -122,9 +122,9 @@
                 text: `
                     <div class="ending">
                         <h2>😔 Derrota na Final</h2>
-                        <p class="story">A Argentina saiu na frente e conseguiu segurar o resultado. Apesar da garra de Neymar, Vini Jr e Endrick, o placar terminou 1x3. O hexa não veio dessa vez.</p>
+                        <p class="story">A Argentina saiu na frente e conseguiu segurar o resultado. Apesar da garra de Ronaldo, Ronaldinho e Kaká, o placar terminou 1x3. O tetra não veio dessa vez.</p>
                         <img src="https://sinalnews.com.br/wp-content/uploads/2022/12/2022-12-09t175703z_1690816891_up1eic91dv2wg_rtrmadp_3_soccer-worldcup-cro-bra-report.jpg" alt="Derrota na Final">
-                        <p class="story">No vestiário, o time se uniu. Neymar consolou os jovens. A lição ficou: o futebol ensina superação. O Brasil já pensa no próximo ciclo.</p>
+                        <p class="story">No vestiário, o time se uniu. Ronaldo consolou os jovens. A lição ficou: o futebol ensina superação. O Brasil já pensa no próximo ciclo.</p>
                         <p><strong>Final Alternativo - Lição de resiliência</strong></p>
                     </div>
                 `,
