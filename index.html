@@ -1,154 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminho para o tetra - Imersão IA Alura</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(#d2e904, #298000);
-            color: #fff;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 15px;
-            border: 4px solid #FFD700;
-        }
-        h1 {
-            color: #FFD700;
-            text-shadow: 0 0 10px #00FF00;
-        }
-        .story {
-            text-align: left;
-            line-height: 1.6;
-            margin: 25px 0;
-            font-size: 1.1em;
-        }
-        button {
-            background: #FFD700;
-            color: #006400;
-            border: none;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 1.1em;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        button:hover {
-            background: #00FF00;
-            transform: scale(1.05);
-        }
-        img {
-            max-width: 100%;
-            border-radius: 12px;
-            margin: 20px 0;
-            border: 3px solid #FFD700;
-        }
-        .ending {
-            font-size: 1.3em;
-            padding: 20px;
-            border: 5px solid #FFD700;
-            margin: 30px 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Seu perfil de programador</title>
 </head>
 <body>
-    <div class="container">
-        <h1>🏆 CAMINHO PARA O TETRA</h1>
-        <p><strong>Uma aventura interativa da Copa do Mundo 2002 • Imersão IA Alura</strong></p>
-
-        <div id="content">
-            <!-- História inicial será inserida via JS -->
+    <div class="caixa-principal">
+        <h1>Missão Programador</h1>
+        <div class="caixa-perguntas"></div>
+        <div class="caixa-alternativas"></div>
+        <div class="caixa-resultado">
+            <p class="texto-resultado"></p>
         </div>
-
-        <div id="choices"></div>
     </div>
-
-    <script>
-        const story = {
-            start: {
-                text: `
-                    <p class="story">Era 2026. A Copa do Mundo estava acontecendo e o Brasil sonhava com o tetra. Você é Fuzzinatto, analista da Seleção Brasileira. O time contava com Ronaldo, Ronaldinho e o jovem Kaká.</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/NY_NJ_Stadium_Brazil_V_Morocco_13_June_2026-59.jpg" alt="Estádio lotado na Copa 2026">
-                    <p class="story">Primeira fase: vitórias convincentes contra Inglaterra, Senegal e Irã. O time chega às oitavas com aura.</p>
-                `,
-                choices: [
-                    { text: "Reforçar a marcação com rodízio", next: "quartas" },
-                    { text: "Apostar no ataque e farmar aura", next: "quartas" }
-                ]
-            },
-            quartas: {
-                text: `
-                    <p class="story">Nas quartas, contra a França, foi um jogo épico. Ronaldo deu um passe de calcanhar genial para Ronaldiho abrir o placar. Ronaldinho virou o jogo. Brasil classificado!</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Confed.Cup2013Champions.jpg" alt="Seleção celebrando">
-                    <p class="story">Você percebeu que o meio-campo cansava. A semi-final contra a Alemanha seria decisiva.</p>
-                `,
-                choices: [
-                    { text: "Continuar para a semifinal", next: "semifinal" }
-                ]
-            },
-            semifinal: {
-                text: `
-                    <p class="story">Na semifinal, o Brasil enfrentou a Alemanha. Após um primeiro tempo tenso, Kaká fez um gol de falta incrível e Ronaldinho selou a vitória por 2x0. O Brasil estava na FINAL contra a Argentina!</p>
-                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=800&q=80" alt="Estádio lotado na semifinal">
-                `,
-                choices: [
-                    { text: "Ir para a Final - Buscar o tetra", next: "final_tetra" },
-                    { text: "Ir para a Final - Rivalidade máxima", next: "final_derrota" }
-                ]
-            },
-            final_hexa: {
-                text: `
-                    <div class="ending">
-                        <h2>🏆 O TETRA CHEGOU!</h2>
-                        <p class="story">Na grande final, a Argentina abriu o placar, mas o Brasil reagiu. Ronaldo empatou, Ronaldinho virou de pênalti e Kaká fechou o placar em 3x1. O Brasil é tetracampeão do mundo!</p>
-                        <img src="<img src="https://museudofutebol.org.br/crfb/acervo/557619/" alt="Seleção Brasileira comemorando o Hexa">
-                        <p class="story">Ronaldo chorando, Ronaldinho dançando, Kaká sendo carregado. O país inteiro celebra nas ruas com verde, amarelo e azul.</p>
-                        <p><strong>Final Feliz - Tetra conquistado!</strong></p>
-                    </div>
-                `,
-                choices: []
-            },
-            final_derrota: {
-                text: `
-                    <div class="ending">
-                        <h2>😔 Derrota na Final</h2>
-                        <p class="story">A Argentina saiu na frente e conseguiu segurar o resultado. Apesar da garra de Ronaldo, Ronaldinho e Kaká, o placar terminou 1x3. O tetra não veio dessa vez.</p>
-                        <img src="https://www.google.com/imgres?q=Imagem%20ronaldo%20fenomeno%20triste&imgurl=https%3A%2F%2Fconteudo.imguol.com.br%2Fc%2Fesporte%2F33%2F2022%2F10%2F23%2Fronaldo-em-final-da-copa-do-mundo-de-1998-contra-a-franca-1666577846250_v2_450x450.jpg&imgrefurl=https%3A%2F%2Fwww.uol.com.br%2Fesporte%2Ffutebol%2Fultimas-noticias%2F2022%2F10%2F23%2Fronaldo-convulsao-copa-do-mundo-98.htm&docid=0rDfje9pprtF7M&tbnid=lYj1iCZyADxHTM&vet=12ahUKEwiqyKmohP2VAxXHLLkGHZYJFskQnPAOegQIQxAA..i&w=450&h=450&hcb=2&ved=2ahUKEwiqyKmohP2VAxXHLLkGHZYJFskQnPAOegQIQxAA" alt="Derrota na Final">
-                        <p class="story">No vestiário, o time se uniu. Ronaldo consolou os jovens. A lição ficou: o futebol ensina superação. O Brasil já pensa no próximo ciclo.</p>
-                        <p><strong>Final Alternativo - Lição de resiliência</strong></p>
-                    </div>
-                `,
-                choices: []
-            }
-        };
-
-        function loadScene(sceneKey) {
-            const scene = story[sceneKey];
-            document.getElementById('content').innerHTML = scene.text;
-            
-            const choicesDiv = document.getElementById('choices');
-            choicesDiv.innerHTML = '';
-            
-            scene.choices.forEach(choice => {
-                const btn = document.createElement('button');
-                btn.textContent = choice.text;
-                btn.onclick = () => loadScene(choice.next);
-                choicesDiv.appendChild(btn);
-            });
-        }
-
-        // Iniciar o jogo
-        loadScene('start');
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
