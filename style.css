@@ -1,59 +1,21 @@
-:root{
-    --cor-fundo: #01080E;
-    --cor-principal: #0B0D20 ;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
-}
+:::writing{variant="document" id="31684" title="style.css"} :root { --cor-fundo: #01080E; --cor-principal: #0B0D20; --cor-secundaria: #212333; --cor-destaque: #2BDEFD; --cor-texto: #D7F9FF; }
 
-body{
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: "Inter", sans-serif;
-}
+body { background-color: var(--cor-fundo); color: var(--cor-texto); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: "Inter", sans-serif; }
 
-.caixa-principal{
-    background-color: var(--cor-principal);
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-}
+.caixa-principal { background-color: var(--cor-principal); width: 90%; max-width: 700px; text-align: center; padding: 30px; border-radius: 15px; box-shadow: 0 0 20px rgba(43, 222, 253, 0.15); }
 
-.caixa-perguntas{
-    margin-bottom: 15px;
-    line-height: 1.5em;
-}
+h1 { color: var(--cor-destaque); font-family: "Chakra Petch", sans-serif; margin-bottom: 30px; }
 
-h1{
-    color: var(--cor-destaque);
-}
+.caixa-perguntas { margin-bottom: 20px; line-height: 1.6em; font-size: 18px; }
 
-button{
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
-    transition: background-color 0.3s;
-    margin:5px;
-    font-family: "Chakra Petch", sans-serif;
-    font-size: 16px;
-}
+.caixa-alternativas { display: flex; flex-direction: column; gap: 10px; }
 
-button:hover{
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+button { background-color: var(--cor-secundaria); color: var(--cor-texto); border: none; border-radius: 15px; padding: 15px; transition: background-color 0.3s, transform 0.2s; margin: 5px; font-family: "Chakra Petch", sans-serif; font-size: 16px; cursor: pointer; }
 
-}
+button:hover { background-color: var(--cor-destaque); color: var(--cor-principal); transform: scale(1.02); }
 
-.texto-resultado b{
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 700;
-    color: var(--cor-destaque);
-    line-height: 1.5em;
-}
+.caixa-resultado { margin-top: 20px; line-height: 1.6em; }
+
+.texto-resultado { font-size: 17px; }
+
+.texto-resultado strong { color: var(--cor-destaque); font-family: "Chakra Petch", sans-serif; } :::
